@@ -1,24 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MentorBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCp-2O-nZB">
+                                <rect key="frame" x="16" y="482" width="50" height="70.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="GVt-Bd-PG6"/>
+                                    <constraint firstAttribute="height" constant="75" id="fZx-h6-DAK"/>
+                                </constraints>
+                                <color key="tintColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" backgroundImage="arrowtriangle.backward.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="leftClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="2rw-nZ-hx2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5E-sq-H6K">
+                                <rect key="frame" x="348" y="482" width="50" height="70.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="bqr-6K-dLT"/>
+                                    <constraint firstAttribute="width" constant="50" id="lgg-zb-j7p"/>
+                                </constraints>
+                                <color key="tintColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" backgroundImage="arrowtriangle.right.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="rightClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="A0F-Sn-Exo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あだ名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIP-Sg-rws">
+                                <rect key="frame" x="87" y="738" width="240" height="60"/>
+                                <color key="backgroundColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="2Ed-C5-aMF"/>
+                                    <constraint firstAttribute="width" constant="240" id="X0A-xN-yVr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="コース" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUf-yC-0vN">
+                                <rect key="frame" x="87" y="646" width="240" height="60"/>
+                                <color key="backgroundColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Vfu-CR-aqk"/>
+                                    <constraint firstAttribute="height" constant="60" id="XGd-yc-OOV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nagata.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="htn-1b-XgE">
+                                <rect key="frame" x="56" y="108" width="302" height="308"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LCp-2O-nZB" firstAttribute="top" secondItem="htn-1b-XgE" secondAttribute="bottom" constant="64" id="0Ww-Jk-uek"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="htn-1b-XgE" secondAttribute="trailing" constant="56" id="0v5-n9-Nho"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P5E-sq-H6K" secondAttribute="trailing" constant="16" id="2Ma-4r-che"/>
+                            <constraint firstItem="htn-1b-XgE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="5EQ-wa-9Xa"/>
+                            <constraint firstItem="LCp-2O-nZB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8nS-D7-MqZ"/>
+                            <constraint firstItem="htn-1b-XgE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DvJ-4i-HSH"/>
+                            <constraint firstItem="P5E-sq-H6K" firstAttribute="top" secondItem="htn-1b-XgE" secondAttribute="bottom" constant="64" id="Idz-FS-mjb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pIP-Sg-rws" secondAttribute="bottom" constant="64" id="JTd-py-Neg"/>
+                            <constraint firstItem="NUf-yC-0vN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UTr-YG-rbd"/>
+                            <constraint firstItem="NUf-yC-0vN" firstAttribute="top" secondItem="htn-1b-XgE" secondAttribute="bottom" constant="230" id="bTF-ce-cN1"/>
+                            <constraint firstItem="pIP-Sg-rws" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c7P-6f-7k3"/>
+                            <constraint firstItem="htn-1b-XgE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="iGM-4J-IFP"/>
+                            <constraint firstItem="pIP-Sg-rws" firstAttribute="top" secondItem="NUf-yC-0vN" secondAttribute="bottom" constant="32" id="qys-O3-g80"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="courceLabel" destination="NUf-yC-0vN" id="64R-1T-BcU"/>
+                        <outlet property="imageView" destination="htn-1b-XgE" id="eQX-sQ-tQL"/>
+                        <outlet property="nameLabel" destination="pIP-Sg-rws" id="52e-i9-FGE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrowtriangle.backward.fill" catalog="system" width="128" height="113"/>
+        <image name="arrowtriangle.right.fill" catalog="system" width="128" height="113"/>
+        <image name="nagata.jpg" width="960" height="960"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
